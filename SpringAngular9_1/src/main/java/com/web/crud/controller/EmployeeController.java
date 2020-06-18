@@ -68,7 +68,7 @@ public class EmployeeController {
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {
 		Employee employee = employeeRepository.findById(employeeId)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id : " + employeeId));
+				.orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id  : " + employeeId));
 		return ResponseEntity.ok().body(employee);
 	}
 
